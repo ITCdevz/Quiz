@@ -1,26 +1,54 @@
-#welcome {
-  text-align: center;
+/* === Áreas comuns responsivas === */
+#welcome,
+#category,
+#gameover,
+#about {
   max-width: 500px;
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+/* Títulos e parágrafos */
 #welcome h2,
-#welcome p {
+#welcome p,
+#category h2,
+#category p,
+#gameover h2,
+#gameover p {
   margin-bottom: 1rem;
 }
 
-#welcome p {
+#welcome p,
+#category p,
+#gameover p,
+#about h2,
+.about-section h3,
+.about-section p {
   color: #8435de;
 }
 
-#welcome img {
+/* Imagens */
+#welcome img,
+#category img,
+#gameover img {
   margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
 }
 
+/* === Questionário === */
 #question {
   background-color: #8435de;
   border-radius: 1rem;
   padding: 2rem;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  color: white;
 }
 
 #question p {
@@ -33,34 +61,11 @@
 
 #question button {
   border: 2px solid #fff;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
-#category {
-  text-align: center;
-  max-width: 500px;
-}
-
-#category h2,
-#category p {
-  margin-bottom: 1rem;
-}
-
-#category p {
-  color: #8435de;
-}
-
-#category img {
-  margin-top: 2rem;
-  max-width: 300px;
-}
-
-#category button {
-padding: 8px;
-margin: 0.2rem;
-}
-
-.option {
+/* Container de opções */
+#options-container .option {
   background-color: #3c0e70;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -68,13 +73,14 @@ margin: 0.2rem;
   cursor: pointer;
   opacity: 0.8;
   transition: 0.4s;
+  color: white;
 }
- 
 
 #options-container .option p {
   margin-bottom: 0;
 }
 
+/* Estados das opções */
 .correct {
   background-color: #0bfc03;
   font-weight: bold;
@@ -89,42 +95,12 @@ margin: 0.2rem;
   display: none;
 }
 
-#gameover {
-  text-align: center;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-#gameover h2,
-#gameover p {
-  margin-bottom: 1rem;
-}
-
-#gameover p {
-  color: #8435de;
-}
-
-#gameover img {
-  margin: 2rem auto;
-  height: 200px;
-}
- 
-/* Main about container */
-#about {
-  text-align: center;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
+/* === About === */
 #about h2 {
   margin-bottom: 1.5rem;
-  color: #8435de;
   font-size: 2rem;
 }
 
-/* Sections styling */
 .about-section {
   background: rgba(132, 53, 222, 0.1);
   border-radius: 12px;
@@ -134,18 +110,16 @@ margin: 0.2rem;
 }
 
 .about-section h3 {
-  color: #8435de;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
 .about-section p {
-  color: #8435de;
   margin-bottom: 0.8rem;
   line-height: 1.5;
 }
 
-/* Technologies list */
+/* Lista de tecnologias */
 .tech-list {
   display: flex;
   flex-wrap: wrap;
@@ -161,17 +135,18 @@ margin: 0.2rem;
   font-size: 0.9rem;
 }
 
-/* Button styling */
+/* Botões */
 button {
   background: #8435de;
   color: white;
   border: none;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  margin-left: 0.1rem;
 }
 
 button:hover {
@@ -180,3 +155,22 @@ button:hover {
   box-shadow: 0 4px 8px rgba(132, 53, 222, 0.2);
 }
 
+/* === Responsividade adicional === */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  #question {
+    padding: 1rem;
+  }
+
+  .option {
+    padding: 0.8rem;
+  }
+
+  button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
